@@ -1,6 +1,6 @@
 # Jenkins Tutorial
 
-## Requirements
+### Requirements
 * Sample flask application.
 * Dockerfile to build the image
 * Jenkins pipeline for CI/CD Automation
@@ -23,11 +23,12 @@ Check whether jenkins is installed using below command. if not, then install the
 systemctl status jenkins
 ```
 
+### Let's start with Jenkins Dashboard.
 1. Open the jenkins Dashboard and select new item.
 
 ![image](https://github.com/amishah137/jenkins/assets/11003645/8fe36570-7bfa-421f-bc10-58a0a2ac937d)
 
-2. Type name 'docker-flaskapp', select pipeline and press 'OK'
+2. Give the name to pipeline 'docker-flaskapp', select pipeline and press 'OK'
 
 ![image](https://github.com/amishah137/jenkins/assets/11003645/9c71a469-168b-4aa0-b193-1435475e844b)
 
@@ -127,7 +128,7 @@ The Jenkins file describes a Jenkins pipeline that automates the build and deplo
 * stage('push image'): This stage pushes the Docker image to DockerHub.
     * steps: This block contains the steps to be executed within the stage.
     * sh 'docker push amishah137/flaskapp:$BUILD_NUMBER': This line pushes the previously built Docker image to DockerHub using the docker push command.
-15. post: This block defines post-build actions to be executed after all stages are completed. In this case, it includes a single step that always executes, regardless of the pipeline outcome.
+5. post: This block defines post-build actions to be executed after all stages are completed. In this case, it includes a single step that always executes, regardless of the pipeline outcome.
 * always: This keyword specifies that the step should always be executed.
     * sh 'docker logout': This line logs out from DockerHub using the docker logout command.
  
