@@ -23,7 +23,7 @@ Check whether jenkins is installed using below command. if not, then install the
 systemctl status jenkins
 ```
 
-1. Open the jenkins and select new item.
+1. Open the jenkins Dashboard and select new item.
 
 ![image](https://github.com/amishah137/jenkins/assets/11003645/8fe36570-7bfa-421f-bc10-58a0a2ac937d)
 
@@ -58,11 +58,4 @@ systemctl status jenkins
 
 9. 
 10.  
-
-
-
-5. 
-6. 
-7. 
-
 
